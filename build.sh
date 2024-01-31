@@ -34,7 +34,7 @@ if [[ -f $LINUX_README ]]; then
     echo $workdir
     mkdir -p $workdir
     # Build the executable
-    GOOS=linux GOARCH=386 go build -o "$workdir/$APPNAME"
+    GOOS=linux GOARCH=arm64 go build -o "$workdir/$APPNAME"
     # Download pgrun to the temp directory 
     wget -O "$workdir/pgrun" "https://github.com/joncrlsn/pgrun/raw/master/bin-linux/pgrun"
     # Copy the bash runtime script to the temp directory
